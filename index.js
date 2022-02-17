@@ -34,7 +34,8 @@ function getAllMovieTitles(movies) {
   
   arr.push(movie.title)
     
-  }
+  }else return arr
+}
   return arr
 }
 
