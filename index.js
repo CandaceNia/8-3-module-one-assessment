@@ -49,7 +49,21 @@ function getAllMovieTitles(movies) {
  *  getHighestMetascore(movies);
  *  //> 96
  */
-function getHighestMetascore() {}
+function getHighestMetascore(movies) {
+  let highestMetaScore = 0
+
+  if (!movies.length){
+    return highestMetaScore
+  }
+
+  for (let movie of movies){
+    if (movie.metascore > highestMetaScore){
+      highestMetaScore = movie.metascore
+    }
+
+   }
+   return Number(highestMetaScore)
+}
 
 /**
  * getAverageIMDBRating()
