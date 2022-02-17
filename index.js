@@ -101,7 +101,20 @@ return rating/ movies.length
  *  countByRating(movies);
  *  //> { G: 3, PG: 7 }
  */
-function countByRating() {}
+function countByRating(movies) {
+let obj = {};
+
+if (!movies.length){
+  return obj
+}
+  for (let movie of movies){
+if (obj[movie.rated]){
+  obj[movie.rated] ++
+}else obj[movie.rated] = 1
+
+}
+return obj
+}
 
 /**
  * findById()
